@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script  src="jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<form>
+    <input type="text" class="weather">
+</form>
+</body>
+</html>
+<script>
+    $(".weather").blur(function(){
+        wear=$(this).val();
+        $.ajax({
+            url:"index2.php",
+            data:{wear:wear},
+            dataType:'json',
+        })
+    })
+</script>
